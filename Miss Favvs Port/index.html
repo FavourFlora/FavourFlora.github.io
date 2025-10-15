@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional community manager portfolio showcasing skills, experience, and services in social media management and community engagement">
+    <meta name="keywords" content="community manager, portfolio, social media, community engagement, content creation">
+    <meta name="author" content="Community Manager Portfolio">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Community Manager Portfolio">
+    <meta property="og:description" content="Professional community manager showcasing skills, experience, and services in social media management and community engagement">
+    <meta property="og:image" content="https://cdn.pixabay.com/photo/2020/05/18/16/17/social-media-5187243_1280.png">
+    <meta property="og:url" content="https://communitymanagerportfolio.com">
+    
+    <title>Community Manager Portfolio</title>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+    <style id="app-style">
+        :root {
+            --navy-blue: #0a192f;
+            --light-navy: #172a45;
+            --lightest-navy: #303C55;
+            --slate: #8892b0;
+            --light-slate: #a8b2d1;
+            --lightest-slate: #ccd6f6;
+            --white: #e6f1ff;
+            --teal: #64ffda;
+            --light-teal: rgba(100, 255, 218, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--navy-blue);
+            color: var(--light-slate);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--lightest-slate);
+            margin-bottom: 1rem;
+        }
+        
+        section {
+            padding: 100px 0;
+            min-height: 100vh;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(10, 25, 47, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar.scrolled {
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            padding: 0.8rem 0;
+        }
+        
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--teal);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-item {
+            margin-left: 2rem;
+        }
+        
+        .nav-link {
+            color: var(--lightest-slate);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-link:hover {
+            color: var(--teal);
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--teal);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            background: transparent;
+            border: none;
+        }
+        
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: var(--teal);
+            margin: 5px 0;
+            transition: all 0.3s ease;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background-image: url('https://cdn.pixabay.com/photo/2018/03/10/12/00/teamwork-3213924_1280.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+            padding: 0;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(10, 25, 47, 0.85);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .hero-greeting {
+            color: var(--teal);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+        
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+        
+        .hero-subtitle {
+            font-size: 2rem;
+            color: var(--slate);
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero-description {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background: transparent;
+            color: var(--teal);
+            border: 1px solid var(--teal);
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .btn:hover {
+            background-color: var(--light-teal);
+            transform: translateY(-3px);
+        }
+        
+        /* About Section */
+        .about {
+            background-color: var(--navy-blue);
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60%;
+            height: 3px;
+            background-color: var(--teal);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .about-image {
+            position: relative;
+            text-align: center;
+        }
+        
+        .profile-img {
+            width: 280px;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid var(--teal);
+        }
+        
+        .about-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: var(--light-navy);
+            color: var(--teal);
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-5px);
+            background-color: var(--teal);
+            color: var(--navy-blue);
+        }
+        
+        /* Skills Section */
+        .skills {
+            background-color: var(--light-navy);
+        }
+        
+        .skills-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+        
+        .skill-category {
+            margin-bottom: 2rem;
+        }
+        
+        .skill-category h3 {
+            color: var(--teal);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .skill-item {
+            margin-bottom: 1.5rem;
+        }
+        
+        .skill-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+        
+        .skill-name {
+            font-weight: 500;
+        }
+        
+        .skill-percentage {
+            color: var(--teal);
+        }
+        
+        .skill-bar {
+            height: 8px;
+            background-color: var(--lightest-navy);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            background-color: var(--teal);
+            border-radius: 10px;
+            width: 0;
+            transition: width 1.5s ease-in-out;
+        }
+        
+        /* Experience Section */
+        .experience {
+            background-color: var(--navy-blue);
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background-color: var(--teal);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            padding: 20px 40px;
+            position: relative;
+            width: 50%;
+            margin-bottom: 3rem;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: var(--navy-blue);
+            border: 4px solid var(--teal);
+            border-radius: 50%;
+            top: 20px;
+            z-index: 1;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        
+        .timeline-item:nth-child(odd)::after {
+            right: -10px;
+        }
+        
+        .timeline-item:nth-child(even)::after {
+            left: -10px;
+        }
+        
+        .timeline-content {
+            padding: 25px;
+            background-color: var(--light-navy);
+            border-radius: 8px;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .timeline-content h3 {
+            color: var(--teal);
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-date {
+            display: inline-block;
+            color: var(--slate);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+        
+        .timeline-company {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--lightest-slate);
+        }
+        
+        .service-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .service-card {
+            background-color: var(--light-navy);
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background-color: var(--light-teal);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: var(--teal);
+        }
+        
+        .service-card h3 {
+            margin-bottom: 1rem;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background-color: var(--light-navy);
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--teal);
+            margin-top: 0.2rem;
+        }
+        
+        .contact-text h4 {
+            margin-bottom: 0.3rem;
+        }
+        
+        .contact-form {
+            background-color: var(--navy-blue);
+            padding: 2rem;
+            border-radius: 8px;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--lightest-navy);
+            background-color: var(--light-navy);
+            border-radius: 4px;
+            color: var(--light-slate);
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--teal);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background-color: transparent;
+            color: var(--teal);
+            border: 1px solid var(--teal);
+            padding: 12px 28px;
+            font-size: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .submit-btn:hover {
+            background-color: var(--light-teal);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--navy-blue);
+            padding: 2rem 0;
+            text-align: center;
+            border-top: 1px solid var(--lightest-navy);
+        }
+        
+        .footer-text {
+            color: var(--slate);
+            font-size: 0.9rem;
+        }
+        
+        .footer-links {
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        
+        .footer-link {
+            color: var(--light-slate);
+            transition: color 0.3s ease;
+            font-size: 1.2rem;
+        }
+        
+        .footer-link:hover {
+            color: var(--teal);
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--teal);
+            color: var(--navy-blue);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+        
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* Responsive Design */
+        @media screen and (max-width: 992px) {
+            .container {
+                width: 95%;
+            }
+            
+            .about-content,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-image {
+                margin-bottom: 2rem;
+            }
+            
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-cards {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            
+            .timeline-item:nth-child(odd)::after,
+            .timeline-item:nth-child(even)::after {
+                left: 22px;
+            }
+        }
+        
+        @media screen and (max-width: 768px) {
+            section {
+                padding: 80px 0;
+            }
+            
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                height: 100vh;
+                background-color: var(--light-navy);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: right 0.5s ease;
+                z-index: 999;
+            }
+            
+            .nav-links.active {
+                right: 0;
+            }
+            
+            .nav-item {
+                margin: 1.5rem 0;
+            }
+            
+            .nav-link {
+                font-size: 1.2rem;
+            }
+            
+            .hamburger {
+                display: block;
+                z-index: 1000;
+            }
+            
+            .hamburger.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 6px);
+            }
+            
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .hamburger.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -6px);
+            }
+        }
+        
+        @media screen and (max-width: 576px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+            
+            .profile-img {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .timeline-content {
+                padding: 15px;
+            }
+        }
+         #thankyou-popup {
+            position: fixed;
+            inset: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            background: rgba(10, 25, 47, 0.65);
+            z-index: 2000;
+        }
+
+        .popup-content {
+            background: var(--light-navy);
+            color: var(--lightest-slate);
+            padding: 28px 24px;
+            border-radius: 12px;
+            max-width: 420px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+            border: 1px solid rgba(100,255,218,0.12);
+        }
+
+         .popup-icon {
+            font-size: 2.8rem;
+            color: var(--teal);
+            margin-bottom: 12px;
+        }
+
+        .popup-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--white);
+        }
+
+        .popup-text {
+            color: var(--slate);
+            margin-bottom: 18px;
+            font-size: 0.98rem;
+        }
+
+          .popup-close {
+            background: transparent;
+            border: 1px solid var(--teal);
+            color: var(--teal);
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .popup-close:hover {
+            background: var(--light-teal);
+            color: var(--navy-blue);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#home" class="logo">IF.</a>
+            <ul class="nav-links">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <p class="hero-greeting" data-aos="fade-up" data-aos-duration="800">Hello, Welcome I'm</p>
+            <h1 class="hero-title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Ikediashi Favour</h1>
+            <h2 class="hero-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">Community Manager | Virtual Assistant</h2>
+            <p class="hero-description" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                I build and nurture online communities that drive engagement, growth, and brand loyalty. With a passion for storytelling and data-driven strategies, I help brands connect with their audience in meaningful ways.
+            </p>
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
+                <a href="#contact" class="btn">Get In Touch</a>
+                <a href="#experience" class="btn">View My Work</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">About Me</h2>
+            <div class="about-content">
+                <div class="about-image" data-aos="fade-right" data-aos-duration="1000">
+                    <img src="Favour.jpg" alt="Profile Picture" class="profile-img">
+                </div>
+                <div class="about-text" data-aos="fade-left" data-aos-duration="1000">
+                    <p>
+                        Hi there! I'm Ikediashi Favour, a dedicated Community Manager with over 4 years of experience in building and growing online communities for brands across various industries. I specialize in creating engaging content strategies, fostering meaningful interactions, and turning casual users into brand advocates.
+                    </p>
+                    <p>
+                        My approach combines creative content creation with analytical thinking to deliver measurable results. I believe that authentic community engagement is the foundation of successful digital marketing strategies.
+                    </p>
+                    <p>
+                        When I'm not connecting with communities online, you can find me singing/reading educative books, or volunteering for local environmental initiatives.
+                    </p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/favour-ikediashi-/" class="social-icon" target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://wa.me/2349036329327" class="social-icon" target="_blank" title="Whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://instagram.com/bigfavvs_" class="social-icon" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://favourflora@gmail.com" class="social-icon" target="_blank" title="Google">
+                            <i class="fab fa-google"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">My Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category" data-aos="fade-up" data-aos-duration="1000">
+                    <h3>Community Management</h3>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Community Building</span>
+                            <span class="skill-percentage">95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="95"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Crisis Management</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Teamwork</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Engagement Strategy</span>
+                            <span class="skill-percentage">92%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="92"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <h3>Technical Skills</h3>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Social Media Management</span>
+                            <span class="skill-percentage">98%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="98"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Content Creation</span>
+                            <span class="skill-percentage">88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="88"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Analytics & Reporting</span>
+                            <span class="skill-percentage">82%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="82"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">CRM Tools</span>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="80"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Experience & Services</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <h3>Event Co-ordinator</h3>
+                        <span class="timeline-date">April 2022 - Present</span>
+                        <p class="timeline-company">ZAMCYMORA_EVENTS LAGOS NIGERIA.</p>
+                        <p>Organised and managed events for up to 500 partcipants, achieving a 98% satisfaction rate.Negotiated vendor contracts, reducing event expense by 20% while maintaining high services standards.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-content">
+                        <h3>Community manager</h3>
+                        <span class="timeline-date">October 2024 - Present(Volunteer)</span>
+                        <p class="timeline-company">JEKACODE AFRICA ABEOKUTA NIGERIA.</p>
+                        <p>Recruited,trained,and coordinated brand ambassadors to promote events and campaigns. Managed social media platforms,increasing engagements by 30%. Developed and executed ambassador engagement strategies.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <h3>Community Manager</h3>
+                        <span class="timeline-date">March 2025 - Present</span>
+                        <p class="timeline-company">TRUST TEENS COMMUNITY</p>
+                        <p>Grew and managed a safe, active online community of 200 teens on Whatsapp, promoting engagement, personal development sand peer connection.Facilitated interactive discussions and polls on relevant teen issues such as mental health, education, and digital safety.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-content">
+                        <h3>CRM and Content Manager</h3>
+                        <span class="timeline-date">June 2025 - Present</span>
+                        <p class="timeline-company">ADEFEYHOMES AND PROPERTIES</p>
+                        <p>Built stronger customer trust and brand loyalty through personalized communication and value-driven content. Helped improve lead conversion rates by 5% through improved lead nuturing and content targeting</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-cards">
+                <div class="service-card" data-aos="fade-up" data-aos-duration="800">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community Building</h3>
+                    <p>Create and grow thriving online communities that foster meaningful connections between your brand and audience.</p>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Engagement Strategy</h3>
+                    <p>Develop data-driven strategies to increase community participation and create loyal brand advocates.</p>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-pen-fancy"></i>
+                    </div>
+                    <h3>Content Creation</h3>
+                    <p>Craft compelling content that resonates with audience and drives conversations around your brand.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+            
+            <div class="contact-container">
+                <div class="contact-info" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Location</h4>
+                            <p>Lagos, Nigeria</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Email</h4>
+                            <p>favourflora21@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Phone</h4>
+                            <p>09036329327</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Availability</h4>
+                            <p>Monday - Friday</p>
+                        </div>
+                    </div>
+                </div>
+                
+<form id="contact-form" class="contact-form" data-aos="fade-left" data-aos-duration="1000"
+    action="https://formspree.io/f/mpwykalz" method="POST">
+    <div class="form-group">
+        <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
+    </div>
+
+    <div class="form-group">
+        <input type="email" id="email" name="_replyto" class="form-control" placeholder="Your Email" required>
+    </div>
+
+    <div class="form-group">
+        <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" required>
+    </div>
+
+    <div class="form-group">
+        <textarea id="message" name="message" class="form-control" placeholder="Your Message" required></textarea>
+    </div>
+
+    <input type="hidden" name="_subject" value="New message from Favour website">
+
+    <button type="submit" class="submit-btn">Send Message</button>
+</form>
+
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="footer-text">&copy; 2025 Ikediashi Favour Portfolio</p>
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/favour-ikediashi-/" class="footer-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://wa.me/2349036329327" class="footer-link" title="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://instagram.com/bigfavvs_" class="footer-link" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://favourflora@gmail.com" class="footer-link" title="Google"><i class="fab fa-google"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+    
+     <!-- Thank You Popup -->
+    <div id="thankyou-popup" aria-hidden="true">
+        <div class="popup-content" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+            <div class="popup-icon"><i class="fas fa-check-circle"></i></div>
+            <div id="popup-title" class="popup-title">Message Sent</div>
+            <div class="popup-text">Thanks for reaching out — I’ll get back to you shortly.</div>
+            <button class="popup-close" type="button">Close</button>
+        </div>
+    </div>
+    <!-- AOS Animation Library -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    
+    <script id="app-script">
+        // Initialize AOS Animation
+        AOS.init({
+            duration: 1000,
+            once: true,
+            mirror: false,
+        });
+        
+        // Mobile Navigation
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        const navItems = document.querySelectorAll('.nav-link');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+        
+        // Close mobile menu when nav item is clicked
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Scroll event listeners
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            const backToTop = document.querySelector('.back-to-top');
+            
+            // Navbar scroll effect
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+            
+            // Back to top button visibility
+            if (window.scrollY > 500) {
+                backToTop.classList.add('active');
+            } else {
+                backToTop.classList.remove('active');
+            }
+            
+            // Animate skill bars on scroll
+            animateSkillBars();
+        });
+        
+        // Animate skill bars when in viewport
+        function animateSkillBars() {
+            const skillSection = document.querySelector('.skills');
+            const skillBars = document.querySelectorAll('.skill-progress');
+            
+            const sectionPosition = skillSection.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.3;
+            
+            if (sectionPosition < screenPosition) {
+                skillBars.forEach(bar => {
+                    const width = bar.getAttribute('data-width');
+                    bar.style.width = `${width}%`;
+                });
+            }
+        }
+        
+        // Form submission
+        const contactForm = document.getElementById('contact-form');
+
+        // Popup elements (setup once)
+        const popup = document.getElementById('thankyou-popup');
+        const popupClose = popup.querySelector('.popup-close');
+
+        function openPopup() {
+            popup.style.display = 'flex';
+            popup.setAttribute('aria-hidden', 'false');
+        }
+
+        function closePopup() {
+            popup.style.display = 'none';
+            popup.setAttribute('aria-hidden', 'true');
+        }
+
+        popupClose.addEventListener('click', closePopup);
+        // close when clicking overlay
+        popup.addEventListener('click', (e) => {
+            if (e.target === popup) closePopup();
+        });
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Basic form validation
+            if (name.trim() === '' || email.trim() === '' || subject.trim() === '' || message.trim() === '') {
+                alert('Please fill all fields');
+                return;
+            }
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address');
+                return;
+            }
+            
+              // Send to Formspree
+            fetch(contactForm.action, {
+                method: 'POST',
+                body: new FormData(contactForm),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    openPopup();
+                    contactForm.reset();
+                } else {
+                    response.json().then(data => {
+                        const err = (data && data.error) ? data.error : 'Submission failed';
+                        alert(err);
+                    }).catch(() => {
+                        alert('Submission failed. Please try again later.');
+                    });
+                }
+            })
+            .catch(() => {
+                alert('Network error. Please try again later.');
+            });
+        });
+        
+        // Smooth scrolling for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 70,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
